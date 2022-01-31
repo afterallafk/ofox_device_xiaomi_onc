@@ -77,7 +77,12 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=1
 	export FOX_INSTALLER_DEBUG_MODE=0
 	export OF_USE_SYSTEM_FINGERPRINT=0
-
+        
+	# About Settings
+	export OF_MAINTAINER="Aditya & Ganesh"
+	export FOX_VERSION="R11.1_1"
+	export FOX_BUILD_TYPE="Stable"
+	
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
   	   export | grep "FOX" >> $FOX_BUILD_LOG_FILE
